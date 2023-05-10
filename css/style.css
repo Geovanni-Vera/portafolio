@@ -1,0 +1,213 @@
+:root{
+    --fuente-parrafos: 'Open Sans', sans-serif;
+    --fuente-encabezados: 'Roboto', sans-serif;
+    --primario:#784D3C;
+    --claro:#e1e1e1;
+    --blanco:#FFF;
+    --negro:#000;
+}
+/*globales*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+}
+*,*::before,*::after{box-sizing: inherit;}
+body{
+    font-family: var(--fuente-parrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+a{text-decoration: none;}
+h1,h2,h3,h4{
+    font-family: var(--fuente-encabezados);
+    line-height: 1.2;
+}
+h1{font-size: 4.8rem;}
+h2{font-size: 4rem;}
+h3{font-size: 3.2rem;}
+h4{font-size:2.8rem ;}
+img{max-width: 100%;}
+/*utilidades*/
+.contenedor{
+    width: min(90%,120rem);
+    margin: 0 auto;
+}
+.scroll{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.boton{
+    display: block;
+    font-family: var(--fuente-encabezados);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+.boton:hover{cursor: pointer;}
+.boton--primario{background-color: var(--negro);}
+.no-margin{margin: 0;}
+.no-padding{padding: 0;}
+.centrar-texto{text-align: center;}
+/*header*/
+.webp .header{background-image: url(../imagen/banner.webp);}
+.no-webp{background-image: url(../imagen/banner.jpg);}
+.header{
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+    /*primer valor centra vertical segundo valor centra horizontal*/
+    position: relative;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #00000085;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+}
+.logo{color: var(--blanco);}
+.logo__nombre{font-weight: 400;}
+.logo__bold{font-weight: 700;}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+/*Responsive 768px*/
+@media (min-width:768px) {
+    .header{
+        height: 40rem;
+    }
+    .barra{
+        flex-direction: row;
+    }
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+/*Contenido principal*/
+.card{
+    border-bottom: 1px solid var(--claro);
+    margin-bottom: 4rem;
+}
+.card:last-of-type{
+    border: none;
+}
+.iconos{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+.iconos svg{
+    margin: 1rem;
+}
+@media (min-width:768px) {
+    .card{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+        
+    }
+    .card__contenido{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center; 
+    }
+    .boton{
+        display: inline-block;
+    }
+}
+/*footer*/
+.footer{
+    background-color: var(--negro);
+    padding-bottom:3rem;
+    margin-top: 4rem;
+}
+
+/*contacto*/
+.webp .contacto__fondo{background-image: url(../imagen/banner.webp);}
+.no-webp{background-image: url(../imagen/banner.jpg);}
+
+.contacto__fondo{
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width:min(90%,95%);
+    padding: 5rem;
+    border: 1px solid var(--negro);
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.campo .submit{
+    margin: 0 auto;
+    padding: 1rem 4rem;
+}
+.campo__label{
+    text-align: center;
+    flex: 0 0 9rem;
+    padding-right: 2rem;
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--claro);
+    min-width:95%;
+    max-width: 95%;
+}
+
+.campo__field--textarea{
+    min-height: 20rem;
+    max-height: 20rem;
+    
+}
+
+@media (min-width:768px) {
+    .campo{
+        flex-direction: row;
+    }   
+    .campo__label{
+        text-align: right;
+    }
+    .campo__field{
+        min-width:90%;
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+/*Cursos*/
+.boton--platzi{
+    background-color: #2CF1CE;
+    color: #000;
+}
+.boton--udemy{
+    background-color: #A537F0;
+    color: #000;
+}
