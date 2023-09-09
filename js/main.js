@@ -17,7 +17,7 @@ const publicaciones = [
         titulo: "Reloj JS",
         descripcion: "Reloj JS - HTML5 - CSS",
         url: "https://startling-genie-ce21ce.netlify.app/",
-        imagen: "./imagen/Reloj.png",
+        imagen: "./imagen/Reloj.webp",
         
     },
     {
