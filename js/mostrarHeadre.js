@@ -15,7 +15,7 @@ function mostrarHeader(){
                          Frontend Developer</h1>
                     </a>
                     <nav class="navegacion">
-                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                        <a href="nosotros.html" class="navegacion__enlace">Sobre mi</a>
                         <a href="cursos.html" class="navegacion__enlace">Cursos</a>
                         <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                     </nav>
