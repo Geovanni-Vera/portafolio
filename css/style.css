@@ -61,7 +61,7 @@ img{
 .webp .header{background-image: url(../imagen/banner.webp);}
 .no-webp{background-image: url(../imagen/banner.jpg);}
 .header{
-    height: 30rem;
+    height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center center;
